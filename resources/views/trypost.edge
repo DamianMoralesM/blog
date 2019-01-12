@@ -1,0 +1,32 @@
+<form method='POST' action='/publicaciones'>
+
+{{csrfField()}}
+Titulo: <input type='text' name='titulo' >
+
+Texto: <input type='text' name='text' >
+
+<textarea name="parrafos" ></textarea>
+
+
+<button type='submit' >Enviar</button>
+</form>
+
+<ul>
+    @each(user in users)
+      <li> {{ user.username }} </li>
+    @endeach
+  </ul>
+
+  <ul>
+    @each((calories, name) in veggies)
+      <li> {{ name }} has {{ calories }} calories </li>
+    @endeach
+  </ul>
+Conditional:
+  <ul>
+    @each(user in users)
+      <li> {{ user.username }} </li>
+    @else
+      <h2> No users found </h2>
+    @endeach
+  </ul>

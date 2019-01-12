@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Borrador Creator&mdash; </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+   
+  </head>
+  <body class="container">
+<div><h2 class="text-center">Administrador de Contenidos</h2></div>
+<div class='row'>    
+        <div class='col-8'>
+          <h3>Contenido</h3>
+            <div class='container'>
+              <form method='POST' id='main' action='/borrador' >
+                {{ csrfField() }}
+              <button type='submit' class="btn btn-warning">Guardar</button>
+                
+              </form>
+              
+            
+            </div>
+        </div>
+
+        <div class='col-4'>
+        <h3>Panel de Control</h3>
+            <button type='button' onClick='AddText()' class="btn btn-primary"> Agregar Bloque de Texto</button>
+            <button onClick='addImagePicker()' class="btn btn-primary"> Agregar Imagen</button>
+            <button class="btn btn-primary"> Agregar Grupo de Imagenes</button>
+            <button class="btn btn-info" onClick='vistaPrevia()'>Vista Previa</button>
+            <button class="btn btn-warning">Guardar</button>
+        </div>
+</div>
+
+<!--
+  <button type='submit' > Enviar</button>
+-->
+<h3>Vista Previa</h3>
+<div id="preview" class="post-content-body">
+  
+</div>
+<!--
+<input type='file' id='arch' accept="image/png, image/jpeg">
+
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<a href="#" id="fileSelect">Select some files</a> 
+<div id="fileList">
+  <p>No files selected!</p>
+</div>
+-->
+
+<!--
+<form method='POST' action='/borrador'>
+{{csrfField()}}
+<input name='texto' type='text'>
+<button id="unBoton">Un boton</button>
+<button type='submit'> Enviar</button>
+</form>
+-->
+
+
+
+    <script src='js/textEditor/functions.js'></script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
