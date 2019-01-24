@@ -19,8 +19,10 @@
         <div class='col-8'>
           <h3>Contenido</h3>
             <div class='container'>
-              <form method='POST' id='main' action='/borrador' >
+              <form method='POST' id='main' action='/borrador' enctype="multipart/form-data">
                 {{ csrfField() }}
+                <input type="file" name="profile_pic" />
+                
               <button type='submit' class="btn btn-warning">Guardar</button>
                 
               </form>
